@@ -32,4 +32,4 @@ The SQLite database is used to store user and image data. It consists of two tab
 This is a simple example of how to build a web application that allows users to upload and view images. With some additional work, this application could be expanded to include additional features such as user authentication, image tagging, and more.
 
 ### PS
-I don't know how to make chrome Extension but I have tried to make one in the file Image-gallery_extension and currently learning and working on it
+I am not very comfortable with chrome Extension but I have tried to make one in the file Image-gallery_extension and currently learning and working on it
