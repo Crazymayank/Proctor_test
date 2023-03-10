@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "My Extension",
+    "version": "1.0",
+    "description": "This extension allows users to create and upload images to a database",
+    "icons": {
+        "16": "image/16x16.png",
+        "48": "image/48x48.png",
+        "128": "image/128x128.png"
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/",
+        "storage"
+    ]
+}
