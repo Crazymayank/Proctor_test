@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple Images</title>
+  </head>
+  <body>
+
+     <form onsubmit="getImages(event)">
+      <label for="userId">User ID:</label>
+      <input type="text" id="userId" name="userId">
+
+      <button type="submit">Get Images</button>
+    </form>
+
+    <div id="image-container"></div>
+
+
+    <script>
+        const imageContainer = document.getElementById("image-container");
+
+     async function getImageUrls(userId) {
+     const res = await  fetch(`/users/${userId}/images`)
+    const data = await res.json();
+
+    const imageUrls =  data.images.map(image => '/images/uploads/' + image.filename);
+
+    imageUrls.forEach(url => {
+        const img = document.createElement("img");
+        img.src = url;
+        imageContainer.appendChild(img);
+      });
+
+    }
+    function getImages(event) {
+        event.preventDefault();
+
+        const userId = document.getElementById("userId").value;
+        getImageUrls(userId);
+        
+      }
+    </script>
+  </body>
+</html>
